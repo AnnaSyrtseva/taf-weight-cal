@@ -22,9 +22,9 @@ public class WeightCalcTest {
         WebElement inputCalculateWebElement = driver.findElement(inputCalculateBy);
         inputCalculateWebElement.click();
 
+        // check the result of the Test for Form with Empty Value
         By getResultBy = By.xpath("/html/body/table/tbody/tr[2]/td[2]/form/table/tbody/tr[1]/td/b");
         WebElement getResultWebElement = driver.findElement(getResultBy);
-
         String actual = getResultWebElement.getText();
         Assertions.assertEquals("Не указано имя.\n" +
                 "Рост должен быть в диапазоне 50-300 см.\n" +
